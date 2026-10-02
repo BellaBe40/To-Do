@@ -14,3 +14,15 @@ export const priorityLabel = (key) => PRIORITIES.find((p) => p.key === key).labe
 
 export const nextPriority = (key) =>
   PRIORITIES[(PRIORITIES.findIndex((p) => p.key === key) + 1) % PRIORITIES.length].key
+
+export const CATEGORIES = [
+  { key: 'work', label: 'งาน', dot: 'var(--cat-work)' },
+  { key: 'personal', label: 'ส่วนตัว', dot: 'var(--cat-personal)' },
+  { key: 'shopping', label: 'ช้อปปิ้ง', dot: 'var(--cat-shopping)' },
+  { key: 'health', label: 'สุขภาพ', dot: 'var(--cat-health)' },
+]
+
+export const categoryOf = (key) => CATEGORIES.find((c) => c.key === key)
+
+export const nextCategory = (key) =>
+  CATEGORIES[(CATEGORIES.findIndex((c) => c.key === key) + 1) % CATEGORIES.length].key
